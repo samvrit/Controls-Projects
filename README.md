@@ -6,7 +6,11 @@
 - Thrust vector is resolved into $F_1$, $F_2$, $F_3$ in the rocket's body reference frame
 - Lateral thrust acting at center of gravity (COG) is denoted as $F_4$ and $F_5$
 - Forces $F_1$, $F_4$ and $F_5$ act on the COG and result in the translation of COG, and $F_2$ and $F_3$ act as torques about COG
-- Air drag can be linearized using Taylor's expansion
+- Air drag linearized using Taylor's expansion
+- Full state feedback
+- Yaw motion not considered
+- Rotation about body's z-axis is $\theta$ and about body x-axis is $\phi$
+- Surface area exposed to air drag is $A$, $\rho$ is air density and $C_d$ is the drag coefficient
 
 $F_1$, $F_4$ and $F_5$ can be resolved into inertial reference frame using rotation matrices, as follows:
 
@@ -40,7 +44,7 @@ $^oI_{xx} \ddot{\phi} = F_3 \cdot \frac{l}{2}$
 State Vector: $x, y, z, \theta, \phi, \dot{x}, \dot{y}, \dot{z}, \dot{\theta}, \dot{\phi}$
 Inputs: $F_1, F_2, F_3, F_4, F_5$
 
-### State Space Representation
+### State Space Representation after Linearization
 $$
 A = \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
@@ -69,4 +73,12 @@ B = \begin{bmatrix}
 0 & 6/\left(m \cdot l \right) & 0 & 0 & 0 \\
 0 & 0 & 6/\left(m \cdot l \right) & 0 & 0 \\
 \end{bmatrix}
+$$
+
+$$
+C = I_{10}
+$$
+
+$$
+D = 0
 $$
