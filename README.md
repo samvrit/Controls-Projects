@@ -35,14 +35,16 @@ F_5
 $$
 
 ### Equations of Motion
-$m \ddot{x} = F_x$
-$m \ddot{y} + mg - \left( \frac{1}{2} \cdot \rho \cdot A \cdot C_d \cdot \dot{y}^2 \right) = F_y$
-$m \ddot{z} = F_z$
-$^oI_{zz} \ddot{\theta} = F_2 \cdot \frac{l}{2}$
-$^oI_{xx} \ddot{\phi} = F_3 \cdot \frac{l}{2}$
+$$m \ddot{x} = F_x$$
+$$m \ddot{y} + mg - \left( \frac{1}{2} \cdot \rho \cdot A \cdot C_d \cdot \dot{y}^2 \right) = F_y$$
+$$m \ddot{z} = F_z$$
+$$^oI_{zz} \ddot{\theta} = F_2 \cdot \frac{l}{2}$$
+$$^oI_{xx} \ddot{\phi} = F_3 \cdot \frac{l}{2}$$
 
-State Vector: $x, y, z, \theta, \phi, \dot{x}, \dot{y}, \dot{z}, \dot{\theta}, \dot{\phi}$
-Inputs: $F_1, F_2, F_3, F_4, F_5$
+State Vector:
+$$\left[x, y, z, \theta, \phi, \dot{x}, \dot{y}, \dot{z}, \dot{\theta}, \dot{\phi}\right]^T$$
+Inputs: 
+$$\left[F_1, F_2, F_3, F_4, F_5\right]^T$$
 
 ### State Space Representation after Linearization
 $$
